@@ -1,0 +1,23 @@
+{
+	"speakers": {
+		"Elisabeth Rosemann" : ["Das Plauscherl", "Elisabeth Rosemann", "Elisabeth Adler"],
+		"Dominik Angerer" : ["Dominik Angerer", "Thomas Pink & Dominik Angerer"],
+		"Thomas Pink" : ["Thomas Pink", "Thomas Pink & Dominik Angerer"],
+		"Erik Rusek" : ["Erik Rusek und Jürgen Grieshofer", "Florian Brunner, Erik Rusek", "Erik Rusek"],
+		"Jürgen Grieshofer" : ["Erik Rusek und Jürgen Grieshofer", "Jürgen Grieshofer"],
+		"Florian Brunner" : ["Florian Brunner, Erik Rusek", "Florian Brunner"],
+		"Phil Reither": ["Phil Reither", "Phil Reither & Jason Tevnan & Emmanuel Helm", "Das Plauscherl"],
+		"Jason Tevnan": ["Phil Reither & Jason Tevnan & Emmanuel Helm"],
+		"Emmanuel Helm": ["Phil Reither & Jason Tevnan & Emmanuel Helm"],
+    "Stefan Baumgartner": ["Stefan Baumgartner", "Das Plauscherl"],
+    "Dominik Hurnaus": ["Dominik Hurnaus", "Das Plauscherl"],
+    "Hannes Sachsenhofer": ["Das Plauscherl", "Hannes Sachsenhofer"],
+    "Alexander Rosemann": ["Alexander Rosemann", "Das Plauscherl"],
+    "Thomas Einwaller": ["Thomas Einwaller", "Das Plauscherl"]
+	},
+	"locations": {
+		"Dynatrace" : ["Dynatrace", "Compuware GmbH (ehem. Dynatrace)"],
+		"smec": ["smec - Smarter Ecommerce", "smec Smarter Ecommerce"]
+	}
+
+}

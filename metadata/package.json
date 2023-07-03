@@ -1,0 +1,21 @@
+{
+  "name": "metadata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "bluebird": "^2.9.27",
+    "glob": "^5.0.10",
+    "lodash": ">=4.17.11",
+    "yamljs": "^0.2.3"
+  },
+  "dependencies": {
+    "@types/yamljs": "^0.2.31"
+  }
+}
