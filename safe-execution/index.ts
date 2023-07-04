@@ -7,7 +7,9 @@
 - Add generics for the arguments and the return value
 */
 
-function addStatus(func: unknown) {
+type Fn = (...args: any[]) => any
+
+function addStatus(func: (...args: any[]) => any) {
   return function(
     ...args: unknown
   ): unknown {
@@ -34,5 +36,5 @@ function add1(num: number) {
   return num + 1;
 }
 
-const safeAdd1 = addStatus(add1)(2)
+const safeAdd1 = addStatus(add1);
 const result2 = safeAdd1(2);
