@@ -26,3 +26,6 @@ const onAsync = promisify(load)
 onAsync("open").then(res => {
   console.log(res.content);
 })
+
+
+export { }

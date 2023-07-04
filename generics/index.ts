@@ -124,3 +124,5 @@ merge<(Animal | Person)[]>(people, animals);
 for (let elem of people) {
   console.log(elem.age * 2);
 }
+
+export { }

@@ -7,3 +7,5 @@ format("Hello {name}, you are {years} old", {
   name: "Stefan",
   years: 39
 })
+
+export { }

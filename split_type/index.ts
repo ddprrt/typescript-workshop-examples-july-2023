@@ -46,3 +46,5 @@ function loadFormat(formats: Split<VideoFormatURLs>) {
 loadFormat({
   format480p: new URL(""),
 })
+
+export { }
