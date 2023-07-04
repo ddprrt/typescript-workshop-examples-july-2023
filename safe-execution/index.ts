@@ -1,3 +1,12 @@
+/*
+- Create a function that wraps an existing function f
+- It’s meant to safely execute f, putting the execution in a try/catch block
+- If the execution is successful, it returns a status object of status: “success” and the value
+- If it isn’t it should return a status: “error” and the error
+- Think about function arguments as a tuple
+- Add generics for the arguments and the return value
+*/
+
 function addStatus(func: unknown) {
   return function(
     ...args: unknown
