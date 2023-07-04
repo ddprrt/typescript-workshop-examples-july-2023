@@ -7,33 +7,19 @@
 - Add generics for the arguments and the return value
 */
 
-type Result<T> = {
-  status: "success",
-  value: T
-} | {
-  error: unknown,
-  status: "error"
-}
+type Fn = (...args: any[]) => any
 
-function addStatus<Params extends unknown[], Rtn>(func: (...args: Params) => Rtn) {
+function addStatus(func: (...args: any[]) => any) {
   return function(
-    ...args: Params
-  ): Result<Rtn> {
+    ...args: unknown
+  ): unknown {
     try {
-      const value = func(...args);
+      const val = func(...args);
       // TODO
       // Return Status success and value
-      return {
-        status: "success",
-        value
-      }
     } catch (e: unknown) {
       // TODO
       // Return Status error and the error
-      return {
-        status: "error",
-        error: e
-      }
     }
 
   };
@@ -45,20 +31,10 @@ function x() {
 
 const safeX = addStatus(x);
 const result = safeX();
-if (result.status === "success") {
-  result.value
-}
 
 function add1(num: number) {
   return num + 1;
 }
 
 const safeAdd1 = addStatus(add1);
-const result2 = safeAdd1(1);
-
-function complex_function(alpha: number, beta: string, gamma: boolean) {
-  return 1;
-}
-
-const safe_complex_function = addStatus(complex_function);
-const result3 = safe_complex_function(1, "a", true);
+const result2 = safeAdd1(2);
