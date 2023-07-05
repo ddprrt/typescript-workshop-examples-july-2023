@@ -1,3 +1,4 @@
+//@ts-check
 const promisify = require('util').promisify;
 const fs = require('fs/promises');
 const yaml_parse = require('yamljs').parse;
@@ -71,6 +72,11 @@ const mergify = (property, metadata, mergeFile) => key => {
   metadata[property][key] = { count: count || 1, img: img, pos: pos };
 };
 
+/**
+ * @template T
+ * @template U
+ * @param {(el: T) => Promise<U>} fn
+ */
 function map(fn) {
   return this.then(function(list) {
     return Promise.all(list.map(fn));
@@ -78,6 +84,8 @@ function map(fn) {
 };
 
 Promise.prototype.map = map;
+
+Promise.resolve([1, 2, 3]).map(el => el.toString()).map(result => console.log(result))
 
 glob('../technologieplauscherl.github.io/_plauscherl/**/*.html')
   .map(file => fs.readFile(file))
