@@ -29,6 +29,8 @@ const ApiResponse = z.object({
 })
 
 type Person = z.infer<typeof Person>;
+type P1 = z.input<typeof Person>
+type P2 = z.output<typeof Person>
 type ApiResponse = z.infer<typeof ApiResponse>;
 
 async function fetchData() {
