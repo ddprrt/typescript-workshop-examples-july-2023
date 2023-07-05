@@ -1,11 +1,7 @@
 // String template literal types
-
-// Create a function makedWatchedObject that takes an object
-// and returns a proxy that allows you to listen to changes
-
 function makeWatchedObject<T extends object>(obj: T) {
   return {
-    on(event: unknown, cb: (val: unknown) => void) {
+    on<K extends string & keyof T>(event: `${K}Changed`, cb: (value: T[K]) => void) {
 
     },
     ...obj
@@ -34,5 +30,10 @@ doll.on("hasCarChanged", (newValue) => {
     console.log("Marshall has a car!")
   }
 })
+
+type Vertical = "top" | "middle" | "bottom"
+type Horizontal = "left" | "center" | "right"
+
+type Alignments = `${Lowercase<Vertical>}_${Lowercase<Horizontal>}`
 
 export { }
