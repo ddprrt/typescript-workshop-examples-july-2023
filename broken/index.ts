@@ -44,7 +44,7 @@ const actions = ["CREATE", "READ", "UPDATE", "DELETE"] as const;
 type Actions = typeof actions[number]
 
 function isAction(action: string): action is Actions {
-  return actions.includes(action);
+  return actions.reduce((acc, curr) => acc || curr === action, false);
 }
 
 function execute(action: Actions) {
